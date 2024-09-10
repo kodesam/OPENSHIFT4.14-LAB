@@ -174,6 +174,7 @@ group.user.openshift.io/managers created
 Add the leader user to the managers group.
 ```
 ```
+```
 [student@workstation ~]$ oc adm groups add-users managers leader
 group.user.openshift.io/managers added: "leader"
 Assign the self-provisioner cluster role to the managers group.
