@@ -98,6 +98,7 @@ Wait until the new oauth-openshift pods are ready and running, and the previous 
 
 Every 2.0s: oc get pods -n openshift-authentication            ...
 ```
+```
 NAME                               READY   STATUS    RESTARTS   AGE
 oauth-openshift-68d6f666fd-z746p   1/1     Running   0          42s
 Press Ctrl+C to exit the watch command.
@@ -173,11 +174,12 @@ Create a managers group.
 group.user.openshift.io/managers created
 Add the leader user to the managers group.
 ```
-```
+
 ```
 [student@workstation ~]$ oc adm groups add-users managers leader
 group.user.openshift.io/managers added: "leader"
 Assign the self-provisioner cluster role to the managers group.
+```
 ```
 [student@workstation ~]$ oc adm policy add-cluster-role-to-group  \
     self-provisioner managers
